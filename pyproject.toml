@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elicit-bias"
+version = "0.1.0"
+description = "Conversational bias elicitation with all-turn SFT and trajectory-labeled opener DPO"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "PyYAML>=6,<7", "requests>=2.32,<3"]
+
+[project.optional-dependencies]
+train = ["torch>=2.4,<3", "transformers>=4.51,<6", "peft>=0.13,<0.20", "accelerate>=0.34,<2", "datasets>=3,<5"]
+
+[tool.setuptools.packages.find]
+include = ["elicit_bias*"]
+
+[tool.setuptools.package-data]
+elicit_bias = ["taxonomy.yaml", "prompts/*.txt", "prompts/strategies/*.txt", "prompts/judge/*.txt"]
