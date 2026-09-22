@@ -33,7 +33,7 @@ PUBLIC_PROMPTS = {
 }
 RELEASE_FILES = (
     {".gitignore", "README.md", "MODEL_CARD.md", "LICENSE", "LICENSE.md", "pyproject.toml",
-     "elicit_bias/taxonomy.yaml", "tests/test_method.py"}
+     "elicit_bias/taxonomy.yaml", "tests/test_method.py", "docs/usage.md"}
     | {f"elicit_bias/{name}.py" for name in PUBLIC_MODULES}
     | {f"elicit_bias/prompts/{name}" for name in PUBLIC_PROMPTS}
 )
